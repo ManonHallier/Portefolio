@@ -1,0 +1,205 @@
+* { /*Remettre à 0 les propriétés de la page*/
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:#1f2039
+}
+
+p {
+    color : #7c7fca; /* Couleur du texte*/
+    padding-bottom: 5px; /* Espace entre les lignes*/
+}
+
+header {
+    height: 0vh; /* Taille du header : dans le tuto 100 vh*/
+    width: 10vw; /* Largeur du header */
+    background-color:#7c7fca; /* Couleur de fond du header */
+    /* background-image : ;
+    background-size : ; */
+}
+
+main {
+    top: 50px; /* Positionnement texte */
+    left: 30px; /* Positionnement texte */
+    margin-left: 45px; /* Marge gauche */
+    margin-right: 45px; /* Marge droite */
+}
+
+section {
+    padding: 25px 10px 10px 10px; /* définir les différents écarts de remplissage sur les quatre côtés d'un élément */
+    font-size:larger;
+}
+
+.paragraphe {
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.presentation-moi{
+    padding-bottom: 10px;
+}
+
+.optionBTS{
+    font-size:large;
+    color : #7c7fca; 
+    padding-top:5px;
+    margin-left: 50px;
+    margin-right: 50px;   
+}
+
+h2{
+    color:#7c7fca;
+    font-size: xx-large;
+}
+
+.titreh3 {
+    color:#7c7fca;
+    font-size:large;
+}
+
+.photo-container {
+    float: right;
+    width: 250px; /* largeur */
+    height: 250px; /* taille */
+    border-radius: 50%; /* applique la forme circulaire */
+    overflow: hidden; /* cache le contenu dÃ©passant de la forme circulaire */
+    margin-left: 20px; /* ajustement de la marge selon besoins */
+    /* max-witdh : pour gérer la taille maximale d'une image */
+    }
+
+    .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* assure que l'image remplisse completement le cercle */
+    }
+
+
+.navbarre{
+    position: relative;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; /* Centrer les éléménets dans leur boîte*/
+    box-sizing: border-box;
+    font-size:larger;
+}
+
+.navbarre a {
+    color : #7c7fca; /* Couleur du texte*/
+}
+
+.navbarre .logo {
+    font-size: 2em; /* Taille du texte logo*/
+    font-weight: bold; /* texte logo en gras*/
+    /*margin: 30px;*/
+}
+
+.navbarre .nav-links ul {
+    display: flex;
+    color : #7c7fca; /* Couleur du texte*/
+}
+
+.navbarre .nav-links ul li {
+    margin: 0 10px; /* Écart entre les éléments de la barre de navigation*/
+}
+
+.navbarre .nav-links ul li a:hover{
+    color:#9ea0eb;
+}
+
+
+/* Pour changer la couleur de la page active
+.navbarre .nav-links ul li.active a {
+    color: red;
+    font-weight: 600;
+}
+*/
+
+.navbarre .menu-hamburger { /* Pour changer les propriétés du menu hamburger */
+    display: none; /* Ne s'affiche pas lorsque version PC*/
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width:40px;
+}
+
+/* gestion du responsive pour faire disparaitre le menu et faire apapraitre le menu hamburger */
+@media screen and (max-width: 1060px) { /* Changer la taille pour changer à partir de qd s'active le mode mobile*/
+    .navbarre .logo {
+        /*position: relative;*/
+        top: 50px; /* Positionnement du titre */
+        left: 30px; /* Positionnement du titre */
+        margin-left: 30px;
+    }
+
+    .navbarre {
+        padding: 0; /* Supprimer le petit écart à gauche lorsque format mobile*/
+        height: 140px;
+    }
+
+    .navbarre .menu-hamburger {
+        display: block; /* Hamburger apparait lorsque les liens disparaissent */
+
+    }
+    .nav-links{
+        top: 0; /* Repositionner le conteneur sur tout l'écran*/
+        left: 0; /* Repositionner le conteneur sur tout l'écran*/
+        position: absolute;
+        background-color: #1f2039; /* Pour reperer le bloc des liens */
+        backdrop-filter: blur(100px); /* Flouter l'arrière plan */
+        width: 100%; /* Prend toute la taille de l'écran*/
+        height: 100vh; /* Taille du conteneur des liens*/
+        display: flex;
+        justify-content: center; /* Centrer le menu au milieu */
+        align-items: center; /* Centrer le menu sur l'écran */
+        margin-left: -100%; /*Par défaut le menu est caché à gauche et sort après clic*/
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column; /* Les liens apparaissent en colonne */
+        align-items: center; /* Repositionner le conteneur sur tout l'écran*/
+    }
+
+    .navbarre .nav-links ul li {
+        margin: 25px 0px; /* Écart entre les éléments de la barre de navigation*/
+        font-size: 1.5em; /* Taille des éléments du menu */
+    }
+    
+}
+
+.zoom {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+
+.image {
+    width: 200px;
+    max-width: 200px;
+    margin: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Effet de zoom au survol */
+.image:hover {
+    transform: scale(1.1);
+}

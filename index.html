@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefolio - Hallier Manon</title>
+    <!-- Description du site web -->
+    <meta name="description" content="Portefolio développeuse web Hallier Manon">
+    <!-- Mot clé du site -->
+    <meta name="keywords" content="BTS SIO; Hallier Manon; portefolio; développeur web; développeuse web; développement; étudiante; BTS SIO Webitech; Webitech">
+    <!-- Fav icons -->
+    <link rel="icon" type="image/png" href="#">
+    <!-- Balise de langage du site -->
+    <meta http-equiv="Content-Language" content="fr">
+    <!-- Balise d'auteur -->
+    <meta name="author" content="Hallier Manon">
+    <!--Style sheet-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbarre">
+        <a href="#" class="logo">Hallier Manon</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#Moi">A propos</a></li> <!-- Rajouter une classe active sur page d'accueil -->
+                <li><a href="#Projets">Projets</a></li>
+                <li><a href="#Realisations">Réalisations</a></li>
+                <li><a href="#Competences">Compétences</a></li>
+                <li><a href="#ExpPro">Expériences professionnelles</a></li>
+                <li><a href="#VeilleTechno">Veille technologique</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+        <img src="../img/menu-hamburger.png" class="menu-hamburger" alt="menu déroulant">
+    </nav>
+
+    <header>
+<!--
+        <div class="overlay">
+            <div class="presentation">
+                <h1>Bienvenue sur mon portfolio</h1>
+                <p>Je suis une étudiante passionnée par le développement web !</p>
+                <a href="../HTML/index.html" class="custom-btn">Voir mon CV</a>
+            </div>
+        </div>
+ -->
+
+
+    </header>
+
+    <main>
+        <section>
+            <h2 id="Moi">A propos</h2>
+            <div class="paragraphe">
+                <div class="presentation-moi">
+                    <p>
+                        Je m’appelle Manon et je suis étudiante en développement web au sein de l’école Webitech, située dans le 15ème arrondissement de Paris.
+                    </p>
+                </div>
+
+                <p>
+                    Le BTS SIO (Services Informatiques aux Organisations) permet de former les étudiants ...
+                </p>
+
+                <p>
+                    Ce dernier se découpe en deux options :
+                </p>
+
+                <ul>
+                    <li class="optionBTS">
+                        L'option SISR ou Solution d'Infrastructure Système et Réseau ...
+                    </li>
+                    <li class="optionBTS">
+                        L'option SLAM ou Solutions Logicielles et Applications Métiers ...
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="photo-container">
+                <img src="" alt="Ma Photo">
+            </div>
+
+        </section>
+
+       <section>
+            <h2 id="Projets">Mes projets</h2>
+        </section>
+
+        <section>
+            <h2 id="Realisations">Mes réalisations</h2>
+        </section>
+
+
+
+        <section>
+            <h2 id="Competences">Mes compétences</h2>
+            <p class="paragraphe">
+                <div class="sous-titre-competences">
+                    <div class="titreh3">
+                        <h3>Mes compétences professionnelles</h3>
+                    </div>
+
+                    <div class="titreh3">
+                        <h3>Mes compétences personnelles</h3>
+                    </div>
+                </div>
+            </div>
+            </p>
+
+
+
+
+
+
+        </section>
+
+        <section>
+            <h2 id="ExpPro">Mes expériences professionnelles</h2>
+        </section>
+        
+        <section>
+            <h2 id="VeilleTechno">Ma veille technologique</h2>
+        </section>
+
+        <section>
+            <h2 id="Contact">Me contacter</h2>
+        </section> 
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+    
+</body>
+
+<!-- Script ouverture fermeture du menu hamburgerversion mobile-->
+    <script>
+        /* Attribution des variables aux classes HTML */
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        /* */
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+</html>
